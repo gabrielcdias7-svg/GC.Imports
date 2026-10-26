@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="index.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <!--  Cabeçalho  -->
+
+    <header class="topo">
+        <div class="comnteiner">
+            <a href="#consulta" class="flex-itens" aria-label="GC Imports Car">
+                <span class="title">GC</span>
+                <span class="title">Imports</span>
+                <span class="title">Car</span>
+            </a>
+            <nav id="nav">
+                <a href="#consulta" data-r="consulta">Inicio</a>
+                <a href="#consulta" data-r="consulta" data-go="catalogo">Consultar Veiculos</a>
+                <a href="#duvidas" data-r="duvidas">Duvidas frequentes</a>
+                <a href="#login" data-r="login">Entrar ou Cadastrar</a>
+            </nav>
+                <a href="#login" class="btn">Entrar/Cadastrar</a>
+        </div>
+
+        <!--  Inicio/Consulta  -->
+        <div class="container">
+            <section class="pagina" id="inicio">
+                <div class="hero">
+                    <h1>Carros Importados e Seminovos</h1><span>Premiun</span>
+                    <p>Qualidade Garantida e Segurança em primeiro</p>
+                </div>
+
+                <div class="filtro">
+                    <select id="marca" placeholder="Marca">
+                        <option value="">Marca</option>
+                        <option value="">Jepp Renegade</option>
+                        <option value="">Chevrolet Onix 26/27</option>
+                        <option value="">T-Cross Volks 25/26</option>
+                        <option value="">Jetta GLI Volks</option>
+                        <option value="">Dodge RAM 3500</option>
+                        <option value="">Fiat Toro</option>
+                        <option value="">Toyota SW4</option>
+                        <option value="">Byd 26/27</option>
+                    </select>
+                    <select id="modelo" placeholder="Modelo">
+                        <option value="">SUV</option>
+                        <option value="">Esportivo</option>
+                    </select>
+                    <select id="preco" placeholder="Faixa de Preço">
+                        <option value="200000">Até R$ 200 mil</option>
+                        <option value="400000">Até R$ 400 mil</option>
+                        <option value="99999999999">Qualquer</option>
+                    </select>
+                    <select id="motor" placeholder="Motor">
+                        <option value="">Eletrico</option>
+                        <option value="">Combustão</option>          
+                        <option value="">Hibrido</option>          
+                    </select>
+                </div>
+                <div class="grid" id="lista"></div>
+            </section>
+
+            <section class="pagina" id="faq">
+                <h1>Dúvidas <span style="color:var(--vermelho)">Frequentes</span></h1>
+                <details><summary>Como funciona o processo de compra?</summary><p>Você escolhe o carro, faz o test-drive, confere a documentação e fecha o negócio. Cuidamos da transferência.</p></details>
+                <details><summary>Vocês fazem financiamento?</summary><p>Sim, com os principais bancos. A aprovação de crédito costuma sair em poucas horas.</p></details>
+                <details><summary>Os carros têm garantia e procedência?</summary><p>Sim. Todos têm laudo cautelar, histórico de manutenção e garantia de motor e câmbio.</p></details>
+                <details><summary>Aceitam meu carro usado na troca?</summary><p>Aceitamos. Avaliamos na hora e o valor entra como entrada.</p></details>
+                <p style="text-align:center;margin-top:24px">Não achou sua resposta?<br><br>
+                  <a class="btn" href="https://web.whatsapp.com" target="_blank">Chamar no WhatsApp</a></p>
+              </section>
+
+              <section class="pagina" id="login">
+                <div class="login">
+                    <div class="abas">
+                        <button id="abaEntrar" class="ativa">Acessar Conta</button>
+                        <button id="abaCriar">Criar conta</button>
+                    </div>
+                    <form id="form">
+                        <label>Email<input id="email" type="email"></label>
+                        <label>Nome <input  id="nome" type="text"></label>
+                        <label>Cpf<input id="Cpf" type="number" placeholder="000.000.000-00"></label>
+                        <label>Senha <input type="password" placeholder="Minimo 6 números"></label>
+                        <label><input type="checkbox" style="width:auto"> Lembrar-me</label>
+                        <p><a href="#login" style="color:var(--vermelho)">Esqueceu a senha?</a></p>
+                        <button class="btn" style="width:100%" id="enviar">Entrar</button>
+                        <p id="msg"></p>                
+                    </form>
+                </div>
+
+              </section>
+
+            </div>
+
+            <footer>
+                <p><b>GC Imports</b> · Av. das Nações, 1500 – Aracaju/SE</p>
+                <p>(79) 99999-0000 · contato@gcimports.com.br · Instagram · Facebook</p>
+                <p>© 2026 GC Imports. Todos os direitos reservados.</p>
+            </footer>
+
+    </header>
+</body>
+</html>
