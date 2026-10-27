@@ -1,17 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
+    <title>GC Imports Car | Carros Importados e Seminovos</title>
+    <meta name="description" content="Carros importados e seminovos premium em Aracaju/SE. Qualidade garantida e segurança em primeiro lugar.">
+ 
+    <!-- Conexão antecipada com os hosts das imagens (reduz a cadeia de dependências) -->
+    <link rel="preconnect" href="https://quatrorodas.abril.com.br" crossorigin>
+    <link rel="preconnect" href="https://production.autoforce.com" crossorigin>
+    <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+ 
     <link rel="stylesheet" href="index.css">
-    <script src="script.js"></script>
+    <!-- defer: o script não bloqueia mais a renderização -->
+    <script src="script.js" defer></script>
 </head>
-
+ 
 <body>
-    <!--  Cabeçalho  -->
-
     <header class="topo">
         <div class="comnteiner">
             <a href="#consulta" class="flex-itens" aria-label="GC Imports Car">
@@ -25,85 +30,90 @@
                 <a href="#duvidas" data-r="duvidas">Duvidas frequentes</a>
                 <a href="#login" data-r="login">Entrar ou Cadastrar</a>
             </nav>
-                <a href="#login" class="btn">Entrar/Cadastrar</a>
+            <a href="#login" class="btn">Entrar/Cadastrar</a>
         </div>
-
-        <!--  Inicio/Consulta  -->
-        <div class="container">
-            <section class="pagina" id="inicio">
-                <div class="hero">
-                    <h1>Carros Importados e Seminovos</h1><span>Premiun</span>
-                    <p>Qualidade Garantida e Segurança em primeiro</p>
-                </div>
-
-                <div class="filtro">
-                    <select id="marca" placeholder="Marca">
-                        <option value="">Marca</option>
-                        <option value="">Jepp Renegade</option>
-                        <option value="">Chevrolet Onix 26/27</option>
-                        <option value="">T-Cross Volks 25/26</option>
-                        <option value="">Jetta GLI Volks</option>
-                        <option value="">Dodge RAM 3500</option>
-                        <option value="">Fiat Toro</option>
-                        <option value="">Toyota SW4</option>
-                        <option value="">Byd 26/27</option>
-                    </select>
-                    <select id="modelo" placeholder="Modelo">
-                        <option value="">SUV</option>
-                        <option value="">Esportivo</option>
-                    </select>
-                    <select id="preco" placeholder="Faixa de Preço">
-                        <option value="200000">Até R$ 200 mil</option>
-                        <option value="400000">Até R$ 400 mil</option>
-                        <option value="99999999999">Qualquer</option>
-                    </select>
-                    <select id="motor" placeholder="Motor">
-                        <option value="">Eletrico</option>
-                        <option value="">Combustão</option>          
-                        <option value="">Hibrido</option>          
-                    </select>
-                </div>
-                <div class="grid" id="lista"></div>
-            </section>
-
-            <section class="pagina" id="faq">
-                <h1>Dúvidas <span style="color:var(--vermelho)">Frequentes</span></h1>
-                <details><summary>Como funciona o processo de compra?</summary><p>Você escolhe o carro, faz o test-drive, confere a documentação e fecha o negócio. Cuidamos da transferência.</p></details>
-                <details><summary>Vocês fazem financiamento?</summary><p>Sim, com os principais bancos. A aprovação de crédito costuma sair em poucas horas.</p></details>
-                <details><summary>Os carros têm garantia e procedência?</summary><p>Sim. Todos têm laudo cautelar, histórico de manutenção e garantia de motor e câmbio.</p></details>
-                <details><summary>Aceitam meu carro usado na troca?</summary><p>Aceitamos. Avaliamos na hora e o valor entra como entrada.</p></details>
-                <p style="text-align:center;margin-top:24px">Não achou sua resposta?<br><br>
-                  <a class="btn" href="https://web.whatsapp.com" target="_blank">Chamar no WhatsApp</a></p>
-              </section>
-
-              <section class="pagina" id="login">
-                <div class="login">
-                    <div class="abas">
-                        <button id="abaEntrar" class="ativa">Acessar Conta</button>
-                        <button id="abaCriar">Criar conta</button>
-                    </div>
-                    <form id="form">
-                        <label>Email<input id="email" type="email"></label>
-                        <label>Nome <input  id="nome" type="text"></label>
-                        <label>Cpf<input id="Cpf" type="number" placeholder="000.000.000-00"></label>
-                        <label>Senha <input type="password" placeholder="Minimo 6 números"></label>
-                        <label><input type="checkbox" style="width:auto"> Lembrar-me</label>
-                        <p><a href="#login" style="color:var(--vermelho)">Esqueceu a senha?</a></p>
-                        <button class="btn" style="width:100%" id="enviar">Entrar</button>
-                        <p id="msg"></p>                
-                    </form>
-                </div>
-
-              </section>
-
-            </div>
-
-            <footer>
-                <p><b>GC Imports</b> · Av. das Nações, 1500 – Aracaju/SE</p>
-                <p>(79) 99999-0000 · contato@gcimports.com.br · Instagram · Facebook</p>
-                <p>© 2026 GC Imports. Todos os direitos reservados.</p>
-            </footer>
-
     </header>
+ 
+    <main class="container">
+        <section class="pagina" id="inicio">
+            <div class="hero">
+                <h1>Carros Importados e Seminovos</h1><span>Premium</span>
+                <p>Qualidade Garantida e Segurança em primeiro</p>
+            </div>
+ 
+            <div class="filtro">
+                <select id="marca" aria-label="Marca">
+                    <option value="">Marca</option>
+                    <option value="jeep">Jeep</option>
+                    <option value="chevrolet">Chevrolet</option>
+                    <option value="volkswagen">Volkswagen</option>
+                    <option value="dodge">Dodge</option>
+                    <option value="fiat">Fiat</option>
+                    <option value="toyota">Toyota</option>
+                    <option value="byd">BYD</option>
+                </select>
+                <select id="modelo" aria-label="Modelo">
+                    <option value="">Modelo</option>
+                    <option value="renegade">Renegade</option>
+                    <option value="onix">Onix</option>
+                    <option value="t-cross">T-Cross</option>
+                    <option value="jetta">Jetta GLI</option>
+                    <option value="ram">RAM 3500</option>
+                    <option value="toro">Toro</option>
+                    <option value="sw4">SW4</option>
+                    <option value="dolphin">Dolphin</option>
+                </select>
+                <select id="preco" aria-label="Faixa de preço">
+                    <option value="">Faixa de Preço</option>
+                    <option value="200000">Até R$ 200 mil</option>
+                    <option value="400000">Até R$ 400 mil</option>
+                    <option value="">Qualquer</option>
+                </select>
+                <select id="motor" aria-label="Motor">
+                    <option value="">Motor</option>
+                    <option value="eletrico">Elétrico</option>
+                    <option value="combustao">Combustão</option>
+                    <option value="hibrido">Híbrido</option>
+                </select>
+            </div>
+            <div class="grid" id="lista"></div>
+        </section>
+ 
+        <section class="pagina" id="faq">
+            <h1>Dúvidas <span style="color:var(--vermelho)">Frequentes</span></h1>
+            <details><summary>Como funciona o processo de compra?</summary><p>Você escolhe o carro, faz o test-drive, confere a documentação e fecha o negócio. Cuidamos da transferência.</p></details>
+            <details><summary>Vocês fazem financiamento?</summary><p>Sim, com os principais bancos. A aprovação de crédito costuma sair em poucas horas.</p></details>
+            <details><summary>Os carros têm garantia e procedência?</summary><p>Sim. Todos têm laudo cautelar, histórico de manutenção e garantia de motor e câmbio.</p></details>
+            <details><summary>Aceitam meu carro usado na troca?</summary><p>Aceitamos. Avaliamos na hora e o valor entra como entrada.</p></details>
+            <p style="text-align:center;margin-top:24px">Não achou sua resposta?<br><br>
+              <a class="btn" href="https://web.whatsapp.com" target="_blank" rel="noopener">Chamar no WhatsApp</a></p>
+        </section>
+ 
+        <section class="pagina" id="login">
+            <div class="login">
+                <div class="abas">
+                    <button type="button" id="abaEntrar" class="ativa">Acessar Conta</button>
+                    <button type="button" id="abaCriar">Criar conta</button>
+                </div>
+                <form id="form">
+                    <label>Email<input id="email" type="email" autocomplete="email"></label>
+                    <label>Nome <input id="nome" type="text" autocomplete="name"></label>
+                    <label>Cpf<input id="Cpf" type="number" placeholder="000.000.000-00"></label>
+                    <label>Senha <input type="password" placeholder="Mínimo 6 caracteres" autocomplete="current-password"></label>
+                    <label><input type="checkbox" style="width:auto"> Lembrar-me</label>
+                    <p><a href="#login" style="color:var(--vermelho)">Esqueceu a senha?</a></p>
+                    <button class="btn" style="width:100%" id="enviar">Entrar</button>
+                    <p id="msg"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+ 
+    <footer>
+       <p><b>GC Imports</b> · Av. das Nações, 1500 – Aracaju/SE</p>
+        <p>(79) 99999-0000 · contato@gcimports.com.br · Instagram · Facebook</p>
+        <p>© 2026 GC Imports. Todos os direitos reservados.</p>
+    </footer>
 </body>
 </html>
+ 
